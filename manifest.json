@@ -1,0 +1,38 @@
+{
+	"name": "News Paywall to Archive",
+	"description": "Automatically forward some news pages to archive.*",
+	"manifest_version": 3,
+	"version": "1.0",
+	"icons": {
+		"128": "img/default.png"
+	},
+	"host_permissions": [
+		"<all_urls>"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"https://archive.ph/http*",
+				"https://archive.ph/?url=*"
+			],
+			"js": ["archive_cs.js"],
+			"run_at": "document_end"
+		},
+		{
+			"matches": [
+				"https://www.bloomberg.com/*",
+				"https://www.forbes.com/*",
+				"https://www.heraldsun.com.au/*",
+				"https://www.nytimes.com/*",
+				"https://www.theaustralian.com.au/*",
+				"https://www.theepochtimes.com/*",
+				"https://www.thetimes.co.uk/*",
+				"https://www.washingtonpost.com/*",
+				"https://www.washingtontimes.com/*",
+				"https://www.wsj.com/*"
+			],
+			"js": ["sites_cs.js"],
+			"run_at": "document_start"
+		}
+	]
+}
