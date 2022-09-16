@@ -11,6 +11,7 @@ var rx = [
 	'^(https://www.washingtonpost.com/.*?/\\d+/\\d+/\\d+/.*?/)',
 	'^(https://www.washingtontimes.com/news/\\d+/\\w{3}/\\d+/.*?/)',
 	'^(https://www.wsj.com/articles/[^?#]*)',
+	'^(https://foreignpolicy.com/\\d+/\\d+/\\d+/.*/)'
 
 ], m
 
