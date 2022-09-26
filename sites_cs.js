@@ -5,8 +5,9 @@ var rx = [
 	'^(https://www.forbes.com/sites/[^?#]*)',
 	'^(https://foreignpolicy.com/\\d+/\\d+/\\d+/.*/)',
 	'^https://www.heraldsun.com.au/subscribe/news/.*&dest=([^&]*)',
-	"(https://www.nationalgeographic.com/[^/]*/article/[^?#]*)",
+	'^(https://www.nationalgeographic.com/[^/]*/article/[^?#]*)',
 	'^(https://www.nytimes.com/.*\.html)',
+	'^(https://www.telegraph.co.uk/[^/]*/\\d{4}/\\d{2}/\\d{2}/.*/)',
 	'^https://www.theaustralian.com.au/subscribe/news/.*&dest=([^&]*)',
 	'^(https://www.theepochtimes.com/.*\.html)',
 	'^(https://www.thetimes.co.uk/article/[^?#]*)',
@@ -17,6 +18,7 @@ var rx = [
 ], m
 
 for (let i = 0; i <= rx.length; i++) {
+	console.log('np2a: checking ', rx[i]);
 	m = location.href.match(rx[i])
 	if (m && m[1]) {
 		console.log('np2a: match, redirecting to archive')
