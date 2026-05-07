@@ -8,7 +8,7 @@ if (location.hash == '#np2a-load') {
 	if (as.length === 0) {
 		console.log('np2a: no thumbs, do archive')
 		var url = location.href.replace(/^https?:\/\/[^/]*\//,'').split('#')[0]
-		location.href = 'https://archive.ph?url=' + url + '#np2a-create'
+		location.href = 'https://archive.is?url=' + url + '#np2a-create'
 	} else {
 		// click last archive
 		as[as.length-1].click()

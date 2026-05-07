@@ -12,8 +12,8 @@
 	"content_scripts": [
 		{
 			"matches": [
-				"https://archive.ph/http*",
-				"https://archive.ph/?url=*"
+				"https://archive.is/http*",
+				"https://archive.is/?url=*"
 			],
 			"js": ["archive_cs.js"],
 			"run_at": "document_end"

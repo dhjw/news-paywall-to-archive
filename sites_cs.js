@@ -22,8 +22,8 @@ for (let i = 0; i <= rx.length; i++) {
 	m = location.href.match(rx[i])
 	if (m && m[1]) {
 		console.log('np2a: match, redirecting to archive')
-		console.log('np2a: loading https://archive.ph/' + m[1] + '#np2a-load')
-		location.href = 'https://archive.ph/' + m[1] + '#np2a-load'
+		console.log('np2a: loading https://archive.is/' + m[1] + '#np2a-load')
+		location.href = 'https://archive.is/' + m[1] + '#np2a-load'
 		break
 	}
 }
